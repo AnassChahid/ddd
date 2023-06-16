@@ -1,0 +1,168 @@
+<!-- Page Content -->
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Our Services</h1>
+        <span>Our purpose is to make the business life style easier</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="single-services">
+  <div class="container">
+    <div class="row" id="tabs">
+      <div class="col-md-4">
+        <ul>
+          <li><a href='#tabs-1'>Market Analysis <i class="fa fa-angle-right"></i></a></li>
+          <li><a href='#tabs-2'>Bids Publishing <i class="fa fa-angle-right"></i></a></li>
+          <li><a href='#tabs-3'>Bids Tracking <i class="fa fa-angle-right"></i></a></li>
+          <li><a href='#tabs-4'>Offers Submission <i class="fa fa-angle-right"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <section class='tabs-content'>
+          <article id='tabs-1'>
+            <img src="assets/images/single_service_01.jpg" alt="">
+            <h4>Market Analysis</h4>
+            <p>The process of submitting proposals, bids, or quotations in response to a specific request or invitation
+              from an organization or client plays a pivotal role in market analysis.
+              <br><br>It serves as an opportunity for businesses to conduct thorough market research and analysis to
+              understand the demands, trends, and competition within a particular industry or market segment. By
+              participating in the bidding process, businesses gain valuable insights into the market landscape,
+              including the needs and preferences of potential clients or customers.
+            </p>
+          </article>
+          <article id='tabs-2'>
+            <img src="assets/images/single_service_02.jpg" alt="">
+            <h4>Bids Publishing</h4>
+            <p>Bids Publishing refers to the process of publicly announcing and sharing information about available
+              contracts, projects, or procurement opportunities. It is a crucial aspect of the business and government
+              sectors,
+              <br><br>enabling organizations to reach out to potential suppliers, contractors, or service providers.
+              Through bids publishing, organizations can effectively communicate their requirements, specifications, and
+              timelines to attract qualified parties interested in submitting proposals or bids.
+            </p>
+          </article>
+          <article id='tabs-3'>
+            <img src="assets/images/single_service_03.jpg" alt="">
+            <h4>Bids Tracking</h4>
+            <p>Monitoring and recording the progress and outcomes of bidding activities on the website and ensuring
+              transparency are essential aspects of a robust bids publishing platform. By diligently tracking the
+              bidding process,
+              <br><br>the website can provide real-time updates on the status of each bid, including submission
+              deadlines, evaluation stages, and final outcomes. This level of transparency fosters trust and confidence
+              among bidders, as they can easily monitor the progress of their proposals.
+            </p>
+          </article>
+          <article id='tabs-4'>
+            <img src="assets/images/single_service_04.jpg" alt="">
+            <h4>Offers Submission</h4>
+            <p>The process of submitting proposals, bids, or quotations in response to a specific request or invitation
+              from an organization or client is a crucial part of the business and procurement landscape.
+              <br><br>This process enables businesses and service providers to showcase their capabilities, expertise,
+              and competitive offerings to secure projects or contracts. It involves carefully reviewing the
+              requirements outlined in the request or invitation, conducting thorough research, and preparing a
+              comprehensive proposal that addresses the client's needs and objectives.
+            </p>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="callback-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Request a <em>call back</em></h2>
+          <span>Etiam suscipit ante a odio consequat</span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="contact-form">
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="fullname" type="text" class="form-control" id="name" [(ngModel)]="model.fullname"
+                    placeholder="FullName" required #fullname="ngModel">
+                  <!-- <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="error">
+                    <div class="text" *ngIf="fullname.errors && fullname.errors?.['required']">
+                      Name is required.
+                    </div>
+                  </div> -->
+                </fieldset>
+
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="email" type="text" class="form-control" id="email" [(ngModel)]="model.email"
+                    placeholder="E-Mail" required email #email="ngModel">
+                  <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                    <div class="text" *ngIf="email.errors && email.errors?.['required']">Email is required.</div>
+                    <div class="text" *ngIf="email.errors && email.errors?.['email']">Email must be a valid email
+                      address.
+                    </div>
+                  </div> -->
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="subject" type="text" class="form-control" id="subject" [(ngModel)]="model.subject"
+                    placeholder="Subject" required #subject="ngModel">
+                  <!-- <div *ngIf="subject.invalid && (subject.dirty || subject.touched)" class="error">
+                    <div class="text" *ngIf="subject.errors && subject.errors?.['required']">subject is required.</div>
+                  </div> -->
+                </fieldset>
+              </div>
+
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" class="form-control" id="message" [(ngModel)]="model.message" rows="5"
+                    placeholder="Message" required #message="ngModel"></textarea>
+                  <!-- <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                    <div class="text" *ngIf="message.errors && message.errors?.['required']">Message is required.</div>
+                  </div> -->
+                </fieldset>
+              </div>
+              <div class="alert alert-success" style="margin-left: 385px;" *ngIf="MessageSuccess">
+                {{MessageSuccess}}
+              </div>
+              <div class="alert alert-danger" style="margin-left: 385px;" *ngIf="MessageError">
+                {{MessageError}}
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="border-button">Send
+                    Message</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="owl-partners owl-carousel">
+          <div class="partner-item">
+            <img src="assets/images/client-01.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer Starts Here -->

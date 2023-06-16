@@ -1,0 +1,109 @@
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Authentification</h1>
+        <span>Our purpose is to make the business life style easier</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <section id="formHolder">
+
+    <div class="row">
+
+      <!-- Brand Box -->
+      <div class="col-sm-6 brand">
+
+        <div class="heading">
+          <h2>Smart Business</h2>
+          <p>Your Right Choice</p>
+        </div>
+
+        <div class="success-msg">
+          <p>Great! You are one of our members now</p>
+          <a href="#" class="profile">Your Profile</a>
+        </div>
+      </div>
+
+
+      <!-- Form Box -->
+      <div class="col-sm-6 form">
+
+        <!-- Login Form -->
+        <div class="login form-peice switched">
+          <form #f="ngForm" (ngSubmit)="login(f)">
+
+
+            <div class="form-group">
+              <label>Email Adderss</label>
+              <input type="email" name="email" #email="ngModel" ngModel required>
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" #password="ngModel" ngModel id="loginPassword" required>
+            </div>
+
+
+            <div class="alert alert-danger" *ngIf="messageError">
+              {{messageError}}
+            </div>
+
+            <div class="CTA">
+              <input type="submit" value="Login">
+              <a href="#" class="switch">I'm New</a>
+            </div>
+
+          </form>
+        </div><!-- End Login Form -->
+
+
+        <!-- Signup Form -->
+        <div class="signup form-peice">
+          <form #R="ngForm" (ngSubmit)="register(R)">
+
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="username" #username="ngModel" ngModel>
+              <span class="error"></span>
+            </div>
+
+
+            <div class="form-group">
+              <label>Email Adderss</label>
+              <input type="email" name="email" email #email="ngModel" ngModel>
+              <span class="error"></span>
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" #password="ngModel" ngModel>
+              <span class="error"></span>
+            </div>
+
+            <div class="alert alert-danger" *ngIf="messageError">
+              {{messageError}}
+            </div>
+            <div class="alert alert-success" *ngIf="messageSuccess">
+              {{messageSuccess}}
+            </div>
+            <div class="CTA">
+              <input type="submit" [disabled]="R.invalid" value="Signup Now">
+              <a href="#" class="switch">I have an account</a>
+            </div>
+          </form>
+        </div><!-- End Signup Form -->
+      </div>
+    </div>
+
+  </section>
+
+</div>
+<!-- partial -->
+
+<script src='assets/vendor/bootstrap/js/bootstrap.min.js'></script>
+<script src='assets/vendor/jquery/jquery.min.js'></script>
+<script src="assets/script.js"></script>
